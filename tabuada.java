@@ -10,7 +10,6 @@ public class Main {
                 result = i * j;
                 System.out.println(i + "*" + j + "=" + result);
             }
-
         }
     }
 }
