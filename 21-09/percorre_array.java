@@ -6,9 +6,14 @@ imprimindo o mesmo para o ecrã
 public class Main {
 
     public static void main(String[] args) {
-        int array [] = {23,7,52,66,42,23};
+        int [] array = {23,7,52,66,42,23};
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
+        }
+        // OU
+        System.out.println();
+        for(int i : array){
+            System.out.println(i);
         }
     }
 }
