@@ -10,6 +10,7 @@ public class Main {
         Produto p2 = new Produto ("CocaCola", 5, 10);
         v1.adicionaProduto(p1);
         v1.adicionaProduto(p2);
+        System.out.println(v1.getVendas());
 
         System.out.println(v1.calculaTotalVenda());
         System.out.println(v1.totMargens());

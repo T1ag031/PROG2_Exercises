@@ -6,6 +6,7 @@ public class Venda {
     private final Date dataVenda;
     private final Produto[] produtos = new Produto[20];
     private int index = 0;
+    private double vendas = 0;
     //ArrayList<Produto> produtos = new ArrayList<>();
 
     public Venda(){
@@ -20,8 +21,13 @@ public class Venda {
         return produtos;
     }
 
+    public double getVendas() {
+        return vendas;
+    }
+
     public void adicionaProduto(Produto produto){
        this.produtos[index] = produto;
+       vendas++;
        index++;
     }
 
@@ -55,4 +61,3 @@ public class Venda {
 
 
 }
-
