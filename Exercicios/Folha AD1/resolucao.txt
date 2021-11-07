@@ -1,0 +1,214 @@
+1)
+a) A
+b) B
+c) C
+d) C
+/-----------------------------------------------------------------------------------
+2)
+a)
+public Aluno(int numeroAluno, String nome){
+    this.numeroAluno = numeroAluno;
+    this.nome = nome;
+}
+
+b)
+public Aluno getAluno(int numeroAluno){
+    for(int i = 0; i < this.alunos.length -1 && this.alunos[i]!= null; i++){
+        if(alunos[i].getNumeroAluno() == numeroAluno) return alunos[i].getNome;
+    }
+    System.out.println("Aluno nao encontrado!!");
+    return null;
+}
+/-----------------------------------------------------------------------------------
+3)
+a) // Por fazer
+
+b)
+public class Reserva{
+    private int numReserva;
+    private Date data = new Date();
+    private Veiculo[] veiculos = new Veiculo [20];
+
+    public Reserva(int numReserva){
+        this.numReserva = numReserva;
+    }
+
+    public int getNumReserva(){
+        return this.numReserva;
+    }
+
+    public Date getData(){
+        return this.data;
+    }
+
+    public Veiculo getVeiculos(){
+        return this.veiculos;
+    }
+}
+
+public class Veiculo{
+    private String matricula;
+    private float comprimento;
+    private float peso;
+
+    public Veiculo(String matricula, float comprimento, float peso){
+        this.matricula = matricula;
+        this.comprimento = comprimento;
+        this.peso = peso;
+    }
+
+    public void setMatricula(String matricula){
+        this.matricula = matricula;
+    }
+
+    public void setComprimento(float comprimento){
+        this.comprimento = comprimento;
+    }
+
+    public void setPeso(float peso){
+        this.peso = peso;
+    }
+
+    public String getMatricula(){
+        return this.matricula;
+    }
+
+    public float getComprimento(){
+        return this.comprimento;
+    }
+
+    public float getPeso(){
+        return this.peso;
+    }
+}
+
+public class VeiculoPassageiro extends Veiculo{
+    private int lugares;
+    private float precoPassageiro;
+
+    public VeiculoPassageiro(String matricula, float comprimento, float peso, int lugares, float precoPassageiro){
+        this.matricula = matricula;
+        this.comprimento = comprimento;
+        this.peso = peso;
+        this.lugares = lugares;
+        this.precoPassageiro = precoPassageiro;
+    }
+
+    public int getLugares(){
+        return this.lugares;
+    }
+
+    public float getPrecoPassageiro(){
+        return this.precoPassageiro;
+    }
+
+    public void setLugares(int lugares){
+        this.lugares = lugares;
+    }
+
+    public void setPrecoPassageiro(float precoPassageiro){
+        this.precoPassageiro = precoPassageiro;
+    }
+}
+
+public class VeiculoPesado extends Veiculo{
+    private float carga;
+    private float precoTonelada;
+
+    public VeiculoPesado(String matricula, float comprimento, float peso, float carga, float precoTonelada){
+        this.matricula = matricula;
+        this.comprimento = comprimento;
+        this.peso = peso;
+        this.carga = carga;
+        this.precoTonelada = precoTonelada;
+    }
+
+    public void setPrecoPassageiro(float precoTonelada){
+        this.precoTonelada = precoTonelada;
+    }
+
+    public void setCarga(float carga){
+        this.carga = carga;
+    }
+
+    public float getCarga(){
+        return this.carga;
+    }
+
+    public float getPrecoTonelada(){
+        return this.precoTonelada;
+    }
+}
+/-----------------------------------------------------------------------------------
+4)
+a)
+public class Reserva{
+    private int numReserva;
+    private Date data = new Date();
+    private Veiculo[] veiculos = new Veiculo [20];
+    private int index = 0;
+
+    public Reserva(int numReserva){
+        this.numReserva = numReserva;
+    }
+
+    public int getNumReserva(){
+        return this.numReserva;
+    }
+
+    public Date getData(){
+        return this.data;
+    }
+
+    public Veiculo getVeiculos(){
+        return this.veiculos;
+    }
+
+    public void acrescentarVeiculo(Veiculo v){
+        for(Veiculo i : veiculos){
+            if(i.getMatricula == v.getMatricula){
+                System.out.println("Matricula ja existente!");
+                return;
+            }
+        }
+        this.veiculos[index] = v;
+        index++;
+    }
+}
+b) // duvida
+
+c)
+
+public class Reserva{
+    //...
+
+    public float calculaCargaReserva(){
+        // duvida 
+    }
+}
+/-----------------------------------------------------------------------------------
+5)
+a) // Por fazer
+
+b)
+public class Livro{
+    private String titulo;
+    private String autor;
+}
+
+public class Exemplar extends Livro{
+    private String codigo;
+}
+
+public class Socio{
+    private String nome;
+    private String morada;
+}
+
+public class Emprestimo{
+    private int id;
+    private Date data_emprestimo = new Date();
+    private Socio socio;
+    private Exemplar exemplar;
+}
+/-----------------------------------------------------------------------------------
