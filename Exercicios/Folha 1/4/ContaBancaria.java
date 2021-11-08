@@ -30,7 +30,7 @@ public class ContaBancaria {
     public Date getDataAbetura() {
         return dataAbetura;
     }
-    // Ex.: Titular: José Fonseca Saldo: €321.50 Data Abertura: 21/2/2017.
+    // Ex.: Titular: José Fonseca Saldo: €321.50 Data Abertura: 21/2/2017
     public String getInformacaoConta(){
         return "Titular: " + this.titular + " Saldo: " + df.format(this.saldo).replace(",", ".") + "€ Data Abertura: " + data.format(dataAbetura) + ".";
     }
