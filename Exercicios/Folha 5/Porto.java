@@ -38,5 +38,8 @@ public class Porto {
     public void listNavios(){
         navioList.stream().map(Navio::getNome).forEach(System.out::println);
         //navioList.stream().map(Navio::getNome).forEach(s -> System.out.println(s));
+         /*for (Navio navio : this.navioList) {
+            System.out.println(navio.getNome());
+        }*/
     }
 }
